@@ -1,0 +1,306 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2F0FA089-70ED-42D2-8BE6-4A06CAC90DDC}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>SSBS.My.MyApplication</StartupObject>
+    <RootNamespace>SSBS</RootNamespace>
+    <AssemblyName>SSBS</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>SSBS.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>SSBS.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>favicon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Dashboard\Dashboard.Designer.vb">
+      <DependentUpon>Dashboard.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard\Dashboard.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IncFn\dbConn.vb" />
+    <Compile Include="IncFn\libsModule.vb" />
+    <Compile Include="IncFn\modules\memberMdl.vb" />
+    <Compile Include="IncFn\modules\productsmodule.vb" />
+    <Compile Include="IncFn\modules\Sales.vb" />
+    <Compile Include="IncFn\PublicVariables.vb" />
+    <Compile Include="IncFn\QueryModule.vb" />
+    <Compile Include="IncFn\saveModule.vb" />
+    <Compile Include="IncFn\tableRows.vb" />
+    <Compile Include="Login.Designer.vb">
+      <DependentUpon>Login.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Login.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="prdts\addCustomer.Designer.vb">
+      <DependentUpon>addCustomer.vb</DependentUpon>
+    </Compile>
+    <Compile Include="prdts\addCustomer.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="prdts\addMembers.Designer.vb">
+      <DependentUpon>addMembers.vb</DependentUpon>
+    </Compile>
+    <Compile Include="prdts\addMembers.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="prdts\addSupplier.Designer.vb">
+      <DependentUpon>addSupplier.vb</DependentUpon>
+    </Compile>
+    <Compile Include="prdts\addSupplier.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="prdts\Category.Designer.vb">
+      <DependentUpon>Category.vb</DependentUpon>
+    </Compile>
+    <Compile Include="prdts\Category.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="prdts\Product.Designer.vb">
+      <DependentUpon>Product.vb</DependentUpon>
+    </Compile>
+    <Compile Include="prdts\Product.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="prdts\Sales.Designer.vb">
+      <DependentUpon>Sales.vb</DependentUpon>
+    </Compile>
+    <Compile Include="prdts\Sales.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SalesPanel\POS.Designer.vb">
+      <DependentUpon>POS.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SalesPanel\POS.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SalesPanel\POSPanel.Designer.vb">
+      <DependentUpon>POSPanel.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SalesPanel\POSPanel.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SplashScreen.Designer.vb">
+      <DependentUpon>SplashScreen.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SplashScreen.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\OutStock.Designer.vb">
+      <DependentUpon>OutStock.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\OutStock.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\TransactMenu.Designer.vb">
+      <DependentUpon>TransactMenu.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\TransactMenu.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WelcomeApp.Designer.vb">
+      <DependentUpon>WelcomeApp.vb</DependentUpon>
+    </Compile>
+    <Compile Include="WelcomeApp.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Dashboard\Dashboard.resx">
+      <DependentUpon>Dashboard.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="prdts\addCustomer.resx">
+      <DependentUpon>addCustomer.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="prdts\addMembers.resx">
+      <DependentUpon>addMembers.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="prdts\addSupplier.resx">
+      <DependentUpon>addSupplier.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="prdts\Category.resx">
+      <DependentUpon>Category.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="prdts\Product.resx">
+      <DependentUpon>Product.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="prdts\Sales.resx">
+      <DependentUpon>Sales.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SalesPanel\POS.resx">
+      <DependentUpon>POS.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SalesPanel\POSPanel.resx">
+      <DependentUpon>POSPanel.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SplashScreen.resx">
+      <DependentUpon>SplashScreen.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\OutStock.resx">
+      <DependentUpon>OutStock.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\TransactMenu.resx">
+      <DependentUpon>TransactMenu.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WelcomeApp.resx">
+      <DependentUpon>WelcomeApp.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\remove_white.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Delete_21px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ssb.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="favicon.ico" />
+    <None Include="Resources\income.png" />
+    <None Include="Resources\list.png" />
+    <None Include="Resources\open_folder16001.png" />
+    <None Include="Resources\settings-8.png" />
+    <None Include="Resources\1394809899_license.png" />
+    <None Include="Resources\Add User Male_40px.png" />
+    <None Include="Resources\funnel.png" />
+    <None Include="Resources\login_rounded.png" />
+    <None Include="Resources\Shipped_65px.png" />
+    <None Include="Resources\student.png" />
+    <None Include="Resources\Checkout_52px.png" />
+    <None Include="Resources\back%2520button.jpg" />
+    <None Include="Resources\Home_21px.png" />
+    <None Include="Resources\save_As.png" />
+    <None Include="Resources\Print_21px_1.png" />
+    <None Include="Resources\Delete_21px2.png" />
+    <None Include="Resources\am2r.png" />
+    <None Include="Resources\1amw.gif" />
+    <None Include="Resources\login_logo.jpg" />
+    <None Include="Resources\depositphotos_8818355-vector-illustration-of-single-update-icon.jpg" />
+    <None Include="Resources\Cash Register_40px.png" />
+    <None Include="Resources\add.jpg" />
+    <None Include="Resources\folder-19.png" />
+    <None Include="Resources\database-2.png" />
+    <None Include="Resources\Move by Trolley_40px.png" />
+    <None Include="Resources\Expired_40px1.png" />
+    <None Include="Resources\logout.png" />
+    <None Include="Resources\Checkout_21px1.png" />
+    <None Include="Resources\Checkout_21px.png" />
+    <None Include="Resources\remove_white1.png" />
+    <None Include="Resources\Delete_21px1.png" />
+    <None Include="Resources\Bookmark Ribbon_21px.png" />
+    <None Include="Resources\beverages-3105631_1920.jpg" />
+    <None Include="Resources\power.png" />
+    <None Include="Resources\alarm-clock.png" />
+    <None Include="Resources\desktop.png" />
+    <None Include="Resources\spacefm-find.png" />
+    <None Include="Resources\webservice-office-zoho-sheet.png" />
+    <None Include="Resources\home.png" />
+    <None Include="Resources\calculation.png" />
+    <None Include="Resources\shopping-cart-4264939_1920.jpg" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+</Project>
